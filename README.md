@@ -20,3 +20,5 @@ Example
 
     (ql:quickload :lifegame)
     (lifegame:run)
+
+![](lifegame.png)
