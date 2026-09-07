@@ -125,7 +125,7 @@
 (defun print-summary (gen cycles)
   (charms:write-string-at-point charms:*standard-window*
                                 (format nil
-                                        "GENERATION: ~D/~D ALIVE: ~D"
+                                        "GENERATION: ~d/~d ALIVE: ~d"
                                         gen
                                         cycles
                                         *alive-num*)
@@ -162,7 +162,7 @@
               do (case c
                    ((#\q #\Q) (return-from driver-loop)))
                  (sleep delay)
-              if (< i cycles)
+              when (< i cycles)
                 do (charms:clear-window charms:*standard-window*)
                    (update-board)
                    (print-board)
